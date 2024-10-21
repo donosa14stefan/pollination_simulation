@@ -2,19 +2,19 @@ from pollinator.vehicle import VehicleWrapper
 
 class Fleet:
     def __init__(self):
-        self._vehicles: list[VehicleWrapper] = []
+        self.vehicles = []
 
-    def fleet_add(self, vehicle_wrapper: VehicleWrapper) -> None:
-        self._vehicles.append(vehicle_wrapper)
+    def add_vehicle(self, vehicle):
+        self.vehicles.append(vehicle)
 
-    def takeoff(self, targetAlt = 10) -> None:
-        for vehicle in self._vehicles:
-            vehicle.takeoff(10)
+    def move_all(self, targets):
+        for vehicle, target in zip(self.vehicles, targets):
+            vehicle.move_to(*target)
 
-    def tick(self) -> bool:
-        pass
+    def takeoff_all(self, altitude):
+        for vehicle in self.vehicles:
+            vehicle.takeoff(altitude)
 
-    def run(self) -> None:
-        while True:
-            if self.tick():
-                break
+    def land_all(self):
+        for vehicle in self.vehicles:
+            vehicle.land()
