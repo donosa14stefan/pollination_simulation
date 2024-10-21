@@ -1,5 +1,4 @@
-# Autonomous Pollinators Ground Software
-Code for ground software.
+# POLLINATION SIMULATION
 
 ## Initializing the repo
 1. Clone the repo
