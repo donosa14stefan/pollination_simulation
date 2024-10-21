@@ -1,7 +1,11 @@
 import logging
 
-def setup_logger():
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    return logging.getLogger('pollinator_sim')
+logger = logging.getLogger("pollinator")
+logger.setLevel(logging.INFO)
 
-logger = setup_logger()
+formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+
+file_handler = logging.FileHandler("pollinator.log")
+file_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
