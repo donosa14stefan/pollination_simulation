@@ -13,7 +13,7 @@ def main():
 
     # Adaugă două drone la flotă
     for _ in range(2):
-        vehicle = VehicleWrapper(None)
+        vehicle = VehicleWrapper()  # Eliminați parametrul None
         fleet.add_vehicle(vehicle)
 
     logger.info("Simulation started")
@@ -27,7 +27,7 @@ def main():
             gps = sensors.get_gps(vehicle.position)
             battery = sensors.get_battery_level()
             velocity = sensors.get_velocity()
-            logger.info(f"Vehicle at {gps}, battery: {battery}%, velocity: {velocity} m/s")# Logare
+            logger.info(f"Vehicle at {gps}, battery: {battery}%, velocity: {velocity} m/s")
 
             # Simulează evitarea obstacolelor
             target_position = (200, 200, 20)
@@ -38,8 +38,9 @@ def main():
         # Simulează vederea dronei
         view = env.get_drone_view(vehicle.position, (640, 480))
         cv2.imshow("Drone View", view)
-        cv2.waitKey(1)
+        cv2. waitKey(1)
 
+    # Simulează aterizarea flotei
     fleet.land_all()
     logger.info("All vehicles landed")
 
