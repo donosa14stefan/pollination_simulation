@@ -1,20 +1,47 @@
 from pollinator.environment import Environment
 from pollinator.vehicle import VehicleWrapper
+from pollinator.sensors import SimulatedSensors
+from pollinator.navigation import avoid_obstacles
+from pollinator.fleet import Fleet
+from pollinator.logger import logger
+import cv2
 
 def main():
     env = Environment()
-    vehicle = VehicleWrapper(None)  # Nu este necesar un vehicul real
+    fleet = Fleet()
+    sensors = SimulatedSensors()
 
-    # Simulează mișcarea vehiculului
-    vehicle.move_to(100, 100, 10)
-    vehicle.takeoff(20)
-    vehicle.move_to(200, 200, 20)
-    vehicle.land()
+    # Adaugă două drone la flotă
+    for _ in range(2):
+        vehicle = VehicleWrapper(None)
+        fleet.add_vehicle(vehicle)
 
-    # Simulează vederea dronei
-    view = env.get_drone_view(vehicle.position, (640, 480))
-    cv2.imshow("Drone View", view)
-    cv2.waitKey(0)
+    logger.info("Simulation started")
+
+    # Simulează operațiunile flotei
+    fleet.takeoff_all(20)
+    logger.info("All vehicles took off")
+
+    for _ in range(10):  # Simulează 10 pași de mișcare
+        for vehicle in fleet.vehicles:
+            gps = sensors.get_gps(vehicle.position)
+            battery = sensors.get_battery_level()
+            velocity = sensors.get_velocity()
+            logger.info(f"Vehicle at {gps}, battery: {battery}%, velocity: {velocity} m/s")# Logare
+
+            # Simulează evitarea obstacolelor
+            target_position = (200, 200, 20)
+            obstacles = [(150, 150, 20), (250, 250, 20)]
+            new_target = avoid_obstacles(vehicle.position, target_position, obstacles)
+            vehicle.move_to(*new_target)
+
+        # Simulează vederea dronei
+        view = env.get_drone_view(vehicle.position, (640, 480))
+        cv2.imshow("Drone View", view)
+        cv2.waitKey(1)
+
+    fleet.land_all()
+    logger.info("All vehicles landed")
 
 if __name__ == "__main__":
     main()
