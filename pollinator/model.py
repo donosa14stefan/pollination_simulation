@@ -1,8 +1,6 @@
-import numpy
-from ultralytics import YOLO
 import cv2
-import multiprocessing
-
+import numpy as np
+from ultralytics import YOLO
 
 class Model:
     def __init__(self, model_name: str):
@@ -12,9 +10,18 @@ class Model:
     def start(self):
         self.model = YOLO(self.model_name)
 
-    def on(self, frame):
+    def simulate_camera_frame(self):
+        # Generează o imagine simulată
+        frame = np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8)
+        return frame
+
+    def on(self, frame=None):
+        if frame is None:
+            frame = self.simulate_camera_frame()
         results = self.model(frame)[0]
         return results
+
+    # ... restul metodelor rămân neschimbate
 
     def parse_detections(self, results):
         detections = []
