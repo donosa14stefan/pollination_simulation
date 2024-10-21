@@ -15,6 +15,6 @@ class Fleet:
         for vehicle in self.vehicles:
             vehicle.takeoff(altitude)
 
-    def land_all(self):
+    def land_all( self ):
         for vehicle in self.vehicles:
             vehicle.land()
