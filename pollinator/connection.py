@@ -1,23 +1,18 @@
-import dronekit_sitl
+from dronekit_sitl import SITL
 
 class ConnectionManager:
     def __init__(self):
         self.sitl = None
         self.connection_string = None
 
-    def start_sim(self) -> None:
-        print("Start simulator (SITL)...")
-        self.sitl = dronekit_sitl.start_default()
-        self.connection_string = self.sitl.connection_string()
-        #print("Waiting for SITL ready...")
-        #self.sitl.block_until_ready(verbose=True)
-        print("Simulator started.")
+    def start_sim(self):
+        print("Starting SITL simulation...")
+        self.sitl = SITL()
+        self.sitl.download('copter', '3.3', verbose=True)
+        sitl_args = ['-I0', '--model', 'quad', '--home=-35.363261,149.165230,584,353']
+        self.sitl.launch(sitl_args, await_ready=True, restart=True)
+        self.connection_string = 'tcp:127.0.0.1:5760'
 
-    def to(self, to) -> None:
-        self.sitl = None
-        self.connection_string = to
-
-        #Modifications
-        #line 11: changed sitl.connection_string() to self.sitl.connection_string()
-        
-
+    def stop_sim(self):
+        if self.sitl:
+            self.sitl.stop()
