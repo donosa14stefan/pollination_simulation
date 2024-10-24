@@ -1,0 +1,29 @@
+{
+  "name": "Bell Pepper",
+  "scientific_name": "Capsicum annuum",
+  "family": "Solanaceae",
+  "description": "Bell pepper, also known as sweet pepper, is a popular fruit-bearing plant that produces large, colorful, and mild-tasting fruits. It is rich in vitamins A, C, and antioxidants, and is widely used in culinary dishes for its sweet and crunchy texture.",
+  "growth_characteristics": {
+    "height": "0.5 to 1.5 meters",
+    "spread": "0.4 to 0.6 meters",
+    "growth_rate": "Moderate"
+  },
+  "environmental_requirements": {
+    "light": "Full sun",
+    "temperature": "20°C to 30°C",
+    "humidity": "Moderate",
+    "soil_type": "Well-drained, fertile soil rich in organic matter",
+    "watering_frequency": "Regular, moderate watering, ensuring soil stays moist but not waterlogged"
+  },
+  "cultivation_info": {
+    "planting_season": "Spring (after the last frost)",
+    "harvesting_season": "Summer to early autumn",
+    "propagation_methods": ["Seeds"]
+  },
+  "visual_characteristics": {
+    "leaf_color": "Green",
+    "flower_color": "White",
+    "fruit_color": "Green, red, yellow, orange, or purple depending on the variety"
+  },
+  "3d_model_file": ""
+}
