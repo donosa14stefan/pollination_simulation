@@ -1,0 +1,29 @@
+{
+  "name": "Cucumber",
+  "scientific_name": "Cucumis sativus",
+  "family": "Cucurbitaceae",
+  "description": "The cucumber is a widely cultivated creeping vine that bears cylindrical fruits, which are used as vegetables in cooking. It is known for its high water content and refreshing taste, making it a popular choice in salads and pickling.",
+  "growth_characteristics": {
+    "height": "0.5 to 2 meters (as a vine, or when trellised)",
+    "spread": "1 to 3 meters",
+    "growth_rate": "Fast"
+  },
+  "environmental_requirements": {
+    "light": "Full sun",
+    "temperature": "18°C to 30°C",
+    "humidity": "Moderate to high",
+    "soil_type": "Well-drained, fertile soil rich in organic matter",
+    "watering_frequency": "Frequent watering, keeping soil consistently moist"
+  },
+  "cultivation_info": {
+    "planting_season": "Spring (after the last frost)",
+    "harvesting_season": "Summer to early autumn",
+    "propagation_methods": ["Seeds"]
+  },
+  "visual_characteristics": {
+    "leaf_color": "Green",
+    "flower_color": "Yellow",
+    "fruit_color": "Green"
+  },
+  "3d_model_file": ""
+}
