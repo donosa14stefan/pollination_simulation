@@ -1,0 +1,29 @@
+{
+  "name": "Tomato",
+  "scientific_name": "Solanum lycopersicum",
+  "family": "Solanaceae",
+  "description": "The tomato is a widely cultivated fruit-bearing plant that produces edible berries. It is known for its versatility in cooking and high nutritional value, rich in vitamins A and C, potassium, and antioxidants like lycopene.",
+  "growth_characteristics": {
+    "height": "0.5 to 2 meters",
+    "spread": "0.5 to 1 meter",
+    "growth_rate": "Fast"
+  },
+  "environmental_requirements": {
+    "light": "Full sun",
+    "temperature": "18°C to 30°C",
+    "humidity": "Moderate",
+    "soil_type": "Well-drained, loamy soil rich in organic matter",
+    "watering_frequency": "Regular, moderate watering, allowing soil to dry between waterings"
+  },
+  "cultivation_info": {
+    "planting_season": "Spring (after the last frost)",
+    "harvesting_season": "Summer to early autumn",
+    "propagation_methods": ["Seeds", "Cuttings"]
+  },
+  "visual_characteristics": {
+    "leaf_color": "Green",
+    "flower_color": "Yellow",
+    "fruit_color": "Red, yellow, green, or purple depending on the variety"
+  },
+  "3d_model_file": ""
+}
