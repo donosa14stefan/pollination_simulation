@@ -1,0 +1,29 @@
+{
+  "name": "Strawberry",
+  "scientific_name": "Fragaria × ananassa",
+  "family": "Rosaceae",
+  "description": "Strawberry is a low-growing, perennial plant that produces sweet, juicy, and vibrant red fruits. Known for its rich vitamin C content and antioxidants, it is widely cultivated for its edible fruit, which is used fresh or in jams, desserts, and beverages.",
+  "growth_characteristics": {
+    "height": "0.1 to 0.3 meters",
+    "spread": "0.3 to 0.5 meters",
+    "growth_rate": "Moderate"
+  },
+  "environmental_requirements": {
+    "light": "Full sun to partial shade",
+    "temperature": "15°C to 25°C",
+    "humidity": "Moderate",
+    "soil_type": "Well-drained, loamy or sandy soil rich in organic matter",
+    "watering_frequency": "Regular, keeping soil moist but not waterlogged"
+  },
+  "cultivation_info": {
+    "planting_season": "Spring or autumn, depending on climate",
+    "harvesting_season": "Late spring to summer",
+    "propagation_methods": ["Runners", "Seeds"]
+  },
+  "visual_characteristics": {
+    "leaf_color": "Green",
+    "flower_color": "White",
+    "fruit_color": "Red"
+  },
+  "3d_model_file": ""
+}
