@@ -1,0 +1,29 @@
+{
+  "name": "Basil",
+  "scientific_name": "Ocimum basilicum",
+  "family": "Lamiaceae",
+  "description": "Basil is a fragrant herb known for its aromatic leaves and culinary uses, especially in Mediterranean and Asian cuisines. It is rich in essential oils and contains compounds with antioxidant and anti-inflammatory properties.",
+  "growth_characteristics": {
+    "height": "0.3 to 0.6 meters",
+    "spread": "0.3 to 0.5 meters",
+    "growth_rate": "Fast"
+  },
+  "environmental_requirements": {
+    "light": "Full sun to partial shade",
+    "temperature": "20°C to 30°C",
+    "humidity": "Moderate",
+    "soil_type": "Well-drained, rich, and moist soil",
+    "watering_frequency": "Frequent, keeping the soil consistently moist but not waterlogged"
+  },
+  "cultivation_info": {
+    "planting_season": "Spring (after the last frost)",
+    "harvesting_season": "Late spring to early autumn",
+    "propagation_methods": ["Seeds", "Cuttings"]
+  },
+  "visual_characteristics": {
+    "leaf_color": "Green or purple depending on the variety",
+    "flower_color": "White or purple",
+    "fruit_color": "N/A (seeds are small and brown)"
+  },
+  "3d_model_file": ""
+}
